@@ -1,6 +1,6 @@
 ---
 name: "kodabi-lightrag-query"
-description: "Enrich reasoning chain by decomposing tasks, querying RAG microservices (loose coupling) with only_context=true, parallel execution, aggregation, and python automation."
+description: "Enrich reasoning chain by decomposing tasks, querying RAG microservices (loose coupling) with only_context=true, parallel execution, and aggregation."
 version: "1.3.0"
 author: "Kodabi"
 tags: ["rag", "context-injection", "reasoning", "kodabi", "microservice", "parallel", "automation"]
@@ -53,10 +53,6 @@ Birden fazla microservisten gelen verileri aşağıdaki mantıkla birleştir:
 ### 5. Nihali Aksiyon
 Bilgi zenginleştirilmiş reasoning chain üzerinden yanıtı üret veya kodu yaz.
 
-## Python Helper Script
-`scripts/rag_helper.py` script'i paralel sorguları ve XML etiketlemeyi otomatize eder.
-Kullanımı: `python rag_helper.py "<soru>"`
-
 ## Örnek Kullanım
 
 **Giriş:** "LLMOps için gerekli adımları sırala."
@@ -67,6 +63,6 @@ Kullanımı: `python rag_helper.py "<soru>"`
 4. **Sonuç:** Kod yazılır.
 ## İpuçları
 - `only_context: true` kuralını asla bozma.
-- Paralel sorgular için `asyncio` veya `rag_helper.py` kullan.
+- Paralel sorguları yönetmek için MCP araçlarını kullan.
 - RAG boş dönerse hemen `search_engine` devreye al.
 - Çıktı formatı kullanıcıya net ve doğrudan kullanılabilir olmalı.
